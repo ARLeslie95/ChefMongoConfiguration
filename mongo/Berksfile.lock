@@ -1,0 +1,9 @@
+DEPENDENCIES
+  mongo
+    path: .
+    metadata: true
+
+GRAPH
+  apt (7.1.1)
+  mongo (0.1.0)
+    apt (>= 0.0.0)
