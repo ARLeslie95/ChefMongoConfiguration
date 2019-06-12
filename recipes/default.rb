@@ -27,6 +27,11 @@ package 'mongodb-org' do
   action [:install, :upgrade]
 end
 
+service 'mongod' do
+  supports status: true, restart: true, reload: true
+  action [ :enable, :start]
+end
+
 template '/etc/proxy.conf' do
   source 'proxy.conf.erb'
   # variables proxy_port: node['mongodb-org']['proxy_port']
